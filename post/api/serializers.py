@@ -1,10 +1,9 @@
 from rest_framework import serializers
-from django.utils.translation import gettext_lazy as _
 
 from post.models import Post, Comment
 
-class PostSerializer(serializers.ModelSerializer):
 
+class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = [
@@ -26,4 +25,3 @@ class CommentSerializer(serializers.ModelSerializer):
             'created_at',
             'updated_at',
         ]
-
